@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sociedade de Crédito</title>
-  <meta
-    name="description"
-    content="Solicite segunda via de boletos, antecipações e mais com atendimento rápido pelo WhatsApp."
-  />
+  <meta name="description" content="Solicite segunda via de boletos, antecipações e mais com atendimento rápido pelo WhatsApp." />
   <meta name="author" content="Sociedade de Crédito" />
   <meta name="robots" content="index, follow" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -45,7 +42,7 @@
     .menu {
       padding: 20px;
       display: flex;
-      justify-content: space-between; /* logo à esquerda, menu à direita */
+      justify-content: space-between;
       align-items: center;
       position: relative;
     }
@@ -67,6 +64,11 @@
       display: none;
       cursor: pointer;
       color: #0b5fff;
+    }
+
+    .logo-img {
+      height: 2.5rem;
+      width: auto;
     }
 
     @media (max-width: 768px) {
@@ -99,6 +101,10 @@
       .menu-icon {
         display: block;
       }
+
+      .logo-img {
+        height: 2rem;
+      }
     }
   </style>
 </head>
@@ -111,7 +117,7 @@
       <div class="flex items-center gap-3">
         <i class="fas fa-file-invoice-dollar text-customBlue text-2xl" aria-hidden="true"></i>
         <img
-          src="logoipa.png"
+          src="logoipa.png" width="70" height="70"
           alt="Minha Assessoria"
           class="h-8 w-auto object-contain" <!-- logo menor -->
       </div>
@@ -140,7 +146,7 @@
       >
     </div>
     <div class="img-banner">
-      <img src="banner_home1.png" alt="" />
+      <img src="sobre-ipa.jpeg" alt="" />
     </div>
   </section>
 
