@@ -42,121 +42,99 @@
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
     }
 
-    .menu {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between; /* Logo à esquerda, menu à direita */
-      align-items: center;
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.menu {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* deixa logo à esquerda e menu à direita */
+  align-items: center;
+  position: relative;
+}
 
-    .menu > div.flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
+.categoria {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+.categoria li a {
+  text-decoration: none;
+  color: #0b5fff;
+  font-weight: 600;
+}
 
-    .logo-container i {
-      color: #0b5fff;
-      font-size: 2rem;
-    }
+.menu-icon {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
 
-    .logo-container img {
-      height: 40px;
-      width: auto;
-      object-fit: contain;
-      display: block;
-    }
+@media (max-width: 768px) {
+  .categoria {
+    display: none;
+    flex-direction: column;
+    background-color: #0b5fff;
+    position: absolute;
+    top: 100%;
+    right: 0; /* fica alinhado à direita da tela */
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
 
-    .categoria {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
+  .categoria.show {
+    display: flex;
+  }
 
-    .categoria li a {
-      text-decoration: none;
-      color: #0b5fff;
-      font-weight: 600;
-      font-size: 1rem;
-    }
+  .categoria li {
+    padding: 20px 0;
+    border-bottom: 1px solid #fff;
+  }
 
-    .categoria li a:hover {
-      text-decoration: underline;
-    }
+  .categoria li a {
+    color: #fff;
+  }
 
-    .menu-icon {
-      font-size: 2rem;
-      display: none;
-      cursor: pointer;
-      color: #0b5fff;
-    }
-
-    @media (max-width: 768px) {
-      .categoria {
-        display: none;
-        flex-direction: column;
-        background-color: #0b5fff;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
-      }
-
-      .categoria.show {
-        display: flex;
-      }
-
-      .categoria li {
-        padding: 20px 0;
-        border-bottom: 1px solid #fff;
-      }
-
-      .categoria li a {
-        color: #fff;
-        font-size: 1.2rem;
-      }
-
-      .menu-icon {
-        display: block;
-      }
-    }
+  .menu-icon {
+    display: block;
+  }
+}   
+    
   </style>
 </head>
 
 <body>
-  <!-- Menu de navegação -->
-  <div class="menu">
-    <div class="flex">
-      <!-- Logo à esquerda -->
-      <div class="logo-container">
-        <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
-        <img src="logoipa.png" alt="Minha Assessoria" loading="lazy" />
-      </div>
-
-      <!-- Menu à direita -->
-      <ul class="categoria">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servico">Serviços</a></li>
-        <li><a href="#conteudo-4">Análise Gratuita</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-
-      <!-- Ícone menu para mobile -->
-      <span class="menu-icon" onclick="toggleMenu()">☰</span>
+<!-- Menu de navegação -->
+<div class="menu">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center w-full">
+    <!-- Logo à esquerda -->
+    <div class="flex items-center gap-3">
+      <i class="fas fa-file-invoice-dollar text-customBlue text-2xl" aria-hidden="true"></i>
+      <img
+        src="logoipa.png"
+        alt="Minha Assessoria"
+        class="h-10 w-auto object-contain"
+        loading="lazy"
+      />
     </div>
+
+    <!-- Menu à direita -->
+    <ul class="categoria">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servico">Serviços</a></li>
+      <li><a href="#conteudo-4">Análise Gratuita</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <!-- Ícone menu para mobile -->
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
   </div>
+</div>
+<div class="menu"></div>
+
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+  </div>
+</div>
+
 
   <section class="banner">
     <div class="desc-banner">
@@ -210,7 +188,7 @@
         <h3>Atualização de Parcelas</h3>
         <br />
         <a
-          href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%um%20atendimento"
+          href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento"
           class="button-bloco"
           >Acessar</a
         >
@@ -286,13 +264,10 @@
       <h2>Soluções na palma <br /> da sua mão</h2>
       <p>Facilite suas cobranças</p>
       <p>
-        Tenha controle total das suas cobranças de boletos de forma rápida e
-        eficiente.
+        Tenha controle total das suas cobranças de boletos de forma rápida e eficiente.
       </p>
       <p>
-        Nós acreditamos que um bom atendimento consiste em oferecer processos
-        simples e seguros, que tornem o dia a dia do cliente mais fácil e que
-        estejam acessíveis nos momentos e nos canais que o cliente preferir.
+        Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.
       </p>
       <br /><br />
       <a
@@ -469,15 +444,19 @@
   <script>
     function acceptCookies() {
       document.getElementById("cookie-banner").style.display = "none";
-      localStorage.setItem("cookiesAccepted", "true");
+      sessionStorage.setItem("acceptedCookies", "true");
     }
 
-    // Mostrar banner se não aceitou cookies
-    if (!localStorage.getItem("cookiesAccepted")) {
-      document.getElementById("cookie-banner").style.display = "block";
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!sessionStorage.getItem("acceptedCookies")) {
+        setTimeout(() => {
+          var cookieBanner = document.getElementById("cookie-banner");
+          if (cookieBanner) cookieBanner.style.display = "flex";
+        }, 3000);
+      }
+    });
 
-    // Função para abrir/fechar menu mobile
+    // Função para toggle menu mobile
     function toggleMenu() {
       const categoria = document.querySelector(".categoria");
       categoria.classList.toggle("show");
@@ -485,3 +464,5 @@
   </script>
 </body>
 </html>
+<script src="js/carousel.js"></script>
+<script src="js/menu.js"></script>
