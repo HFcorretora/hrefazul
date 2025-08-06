@@ -630,3 +630,15 @@
     }
     ])
 });
+
+  function toggleMenu() {
+    const menu = document.querySelector('.categoria');
+    menu.classList.toggle('show');
+  }
+document.addEventListener('DOMContentLoaded', function() {
+  const menuButton = document.querySelector('.menu-button');
+  if (menuButton) {
+    menuButton.addEventListener('click', toggleMenu);
+  }
+});
+
