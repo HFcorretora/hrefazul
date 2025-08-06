@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,8 +7,6 @@
   <meta name="description" content="Solicite segunda via de boletos, antecipações e mais com atendimento rápido pelo WhatsApp.">
   <meta name="author" content="Sociedade de Crédito">
   <meta name="robots" content="index, follow">
-
-  <!-- Ícone da aba (favicon) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Estilos principais -->
@@ -32,390 +29,357 @@
     gtag('config', 'AW-370560323');
     gtag('event', 'conversion', { 'send_to': 'AW-370560323/xtVOCMXA6IgYEMOa2bAB' });
   </script>
+  <style>
+  header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .menu {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: #0b5fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .categoria {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .categoria li a {
+    text-decoration: none;
+    color: #0b5fff;
+    font-weight: 600;
+  }
+
+  .categoria li a:hover {
+    text-decoration: underline;
+  }
+
+  .menu-icon {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .categoria {
+      display: none;
+      flex-direction: column;
+      background-color: #0b5fff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .categoria.show {
+      display: flex;
+    }
+
+    .categoria li {
+      padding: 20px 0;
+      border-bottom: 1px solid #fff;
+    }
+
+    .categoria li a {
+      color: #fff;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+  }
+</style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.querySelector('.menu-icon');
+        const categoria = document.querySelector('.categoria');
+    
+        menuIcon.addEventListener('click', function() {
+            categoria.classList.toggle('show');
+        });
+        });
+    </script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+        duration: 1000,
+        once: true
+        });
+    </script>
 </head>
 <body>
+<!-- Menu de navegação -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.categoria');
+      menu.classList.toggle('active');
+    }
+    </script> 
+  <div class="menu">
+    <a href="#" class="logo">Sociedade de Crédito</a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="categoria">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servico">Serviços</a></li>
+      <li><a href="#conteudo-4">Análise Gratuita</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
 
-    <section class="banner">
-        <div class="desc-banner">
-            <!--<h3>2 Via De Boleto</h3>-->
-            <h1>Solicite atendimento</h1>
-            <br>
-            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-banner">
-                Entrar em Contato
-            </a>
-        </div>
-        <div class="img-banner">
-            <img src="banner_home1.png" alt="">
-        </div>
-    </section>
-
-    <section class="cards">
-        <div class="cards-desktop">
-            <div class="bloco">
-                <i class="ph ph-barcode"></i>
-                <h3>Atendimento online</h3>
-                <br>
-                <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">
-                    Acessar
-                </a>
-            </div>
-            <div class="bloco">
-                <i class="ph ph-identification-card"></i>
-                <h3>Antecipação</h3>
-                <br>
-                <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">
-                    Acessar
-                </a>
-            </div>
-            <div class="bloco">
-                <i class="ph ph-cardholder"></i>
-                <h3>Liquidação Antecipada</h3>
-                <br>
-                <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">
-                    Acessar
-                </a>
-            </div>
-            <div class="bloco">
-                <i class="ph ph-cardholder"></i>
-                <h3>Atualização de Parcelas</h3>
-                <br>
-                <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">
-                    Acessar
-                </a>
-            </div>
-
-        </div>
-
-        <div class="carousel">
-            <div class="carousel-track-container">
-                <ul class="carousel-track">
-                    <li class="carousel-slide current-slide">
-                        <div class="bloco">
-                            <i class="ph ph-barcode"></i>
-                            <h3>Segunda Via De Boleto</h3>
-                            <br>
-                            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
-                        </div>
-                    </li>
-                    <li class="carousel-slide">
-                        <div class="bloco">
-                            <i class="ph ph-identification-card"></i>
-                            <h3>Antecipação</h3>
-                            <br>
-                            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
-                        </div>
-                    </li>
-                    <li class="carousel-slide">
-                        <div class="bloco">
-                            <i class="ph ph-cardholder"></i>
-                            <h3>Liquidação Antecipada</h3>
-                            <br>
-                            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
-                        </div>
-                    </li>
-                    <li class="carousel-slide">
-                        <div class="bloco">
-                            <i class="ph ph-cardholder"></i>
-                            <h3>Atualização de Parcelas</h3>
-                            <br>
-                            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="carousel-nav">
-                <button class="carousel-button carousel-button-left">
-                    <i class="ph ph-arrow-circle-left"></i>
-                </button>
-                <button class="carousel-button carousel-button-right">
-                    <i class="ph ph-arrow-circle-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="conteudo-1">
-        <div class="desc-conteudo-1">
-            <h2>Soluções na palma <br>
-                da sua mão</h2>
-            <p>Facilite suas cobranças</p>
-            <p>Tenha controle total das suas cobranças de boletos de forma rápida e eficiente.</p>
-            <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia
-                a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.
-            </p>
-            <br><br>
-            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="button-conteudo-1">
-                Solicitar Atendimento
-            </a>
-        </div>
-        <div class="img-conteudo-1">
-            <img src="bonecos.png" alt="">
-        </div>
-    </section>
-
-    <section id="servico" class="conteudo-2">
-        <div class="conteudo-2-desc">
-            <h2>Facilidades <br>
-                para seu dia a dia</h2>
-
-            <div class="cards-conteudo-2">
-                <div class="bloco-conteudo-2">
-                    <i class="ph ph-barcode"></i>
-                    <h3>Segunda via de Boleto</h3>
-                    <br>
-                    <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="saibamais">Saiba mais -></a>
-                </div>
-                <div class="bloco-conteudo-2">
-                    <i class="ph ph-currency-circle-dollar"></i>
-                    <h3>Quitar Financiamento</h3>
-                    <br>
-                    <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="saibamais">Saiba mais -></a>
-                </div>
-                <div class="bloco-conteudo-2">
-                    <i class="ph ph-calendar-check"></i>
-                    <h3>Antecipar Parcelas</h3>
-                    <br>
-                    <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="saibamais">Saiba mais -></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="conteudo-3">
-        <div class="cards-conteudo-3">
-            <div class="bloco-conteudo-3">
-                <h1>01</h1>
-                <h3>✓ Transparência</h3>
-                <p>Nosso compromisso com a transparência na negociação cria um ambiente de confiança mútua, onde cada
-                    parceria é construída sobre uma base sólida de honestidade e integridade</p>
-            </div>
-            <div class="bloco-conteudo-3">
-                <h1>02</h1>
-                <h3>✓ Seriedade</h3>
-                <p>Combinando transparência e seriedade, estabelecemos padrões elevados na negociação, garantindo
-                    relações sólidas e duradouras baseadas na confiança mútua e integridade inabalável.
-                </p>
-            </div>
-            <div class="bloco-conteudo-3">
-                <h1>03</h1>
-                <h3>✓ Ética</h3>
-                <p>Guiados pela ética, nossa abordagem transparente e séria na negociação promove relações autênticas e
-                    duradouras, onde a confiança mútua é cultivada com integridade inquestionável.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="conteudo-4">
-        <div class="img-conteudo-4">
-            <img src="banner-safra.png" alt="">
-        </div>
-        <div class="conteu-desc-4">
-            <i class="ph ph-whatsapp-logo"></i>
-            <h1>FAÇA UMA ANÁLISE GRATUITA <br> PELO WHATSAPP</h1>
-            <p>+ de 90 % dos Veículos Financiados no Brasil Possuem Juros Abusivos! Você tem um Veículo Financiado? Veja
-                o Valor Real de Suas Parcelas Sem Juros Abusivos!</p>
-            <br> <br>
-            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento" class="burron-conteudo-4">
-                Fale Conosco
-            </a>
-        </div>
-    </section>
-
-    <div class="img-main">
-        <img src="carros.jpg" alt="">
+  <section class="banner">
+    <div class="desc-banner">
+      <h1>Solicite atendimento</h1>
+      <br>
+      <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-banner">Entrar em Contato</a>
     </div>
-    <div class="container">
-        <div class="steps">
-            <h1>Como Financiar Seu Veículo</h1>
-            <p>São apenas 3 passos para financiar seu veículo</p>
-            <div class="step">
-                <h2>1. Selecione o modelo de veículo</h2>
-                <p>O primeiro passo é selecionar o modelo de veículo. Utilize nosso quiz para auxiliá-lo ou busque uma
-                    de nossas revendas parceiras para encontrar o carro ideal para você.</p>
-            </div>
-            <div class="step">
-                <h2>2. Simule as parcelas</h2>
-                <p>Utilize o nosso simulador no site, ou vá até uma de nossas revendas parceiras para simular as
-                    condições do seu financiamento e realizar a análise do seu crédito.</p>
-            </div>
-            <div class="step">
-                <h2>3. Compareça a uma revenda</h2>
-                <p>Receba o resultado da análise e vá até a revenda escolhida com sua simulação em mãos (impressa ou
-                    digital) para efetivar o seu contrato.</p>
-            </div>
-        </div>
-        <div class="quiz">
-            <h2>Ainda não sabe qual veículo escolher?</h2>
-            <p>Nós te ajudamos a encontrar o veículo ideal. Responda algumas perguntas do nosso quiz</p>
-            <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Ol%C3%A1%20Gostaria%20de%20um%20atendimento">Responder →</a>
-        </div>
+    <div class="img-banner">
+      <img src="banner_home1.png" alt="">
     </div>
-    <div id="loader" class="loader">
-        <div class="spinner"></div>
+  </section>
+
+  <section class="cards">
+    <div class="cards-desktop">
+      <div class="bloco">
+        <i class="ph ph-barcode"></i>
+        <h3>Atendimento online</h3>
+        <br>
+        <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+      </div>
+      <div class="bloco">
+        <i class="ph ph-identification-card"></i>
+        <h3>Antecipação</h3>
+        <br>
+        <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+      </div>
+      <div class="bloco">
+        <i class="ph ph-cardholder"></i>
+        <h3>Liquidação Antecipada</h3>
+        <br>
+        <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+      </div>
+      <div class="bloco">
+        <i class="ph ph-cardholder"></i>
+        <h3>Atualização de Parcelas</h3>
+        <br>
+        <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+      </div>
     </div>
 
-  <!-- Botão flutuante do WhatsApp -->
-<a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento"
-   target="_blank"
-   style="
-     position: fixed;
-     width: 60px;
-     height: 60px;
-     bottom: 40px;
-     right: 40px;
-     background-color: #1e90ff;
-     color: #fff;
-     border-radius: 50%;
-     text-align: center;
-     font-size: 30px;
-     box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-     z-index: 1000;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-decoration: none;
-   ">
-  <i class="fa fa-whatsapp" aria-hidden="true"></i>
-</a>
+    <div class="carousel">
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <div class="bloco">
+              <i class="ph ph-barcode"></i>
+              <h3>Segunda Via De Boleto</h3>
+              <br>
+              <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <div class="bloco">
+              <i class="ph ph-identification-card"></i>
+              <h3>Antecipação</h3>
+              <br>
+              <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <div class="bloco">
+              <i class="ph ph-cardholder"></i>
+              <h3>Liquidação Antecipada</h3>
+              <br>
+              <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+            </div>
+          </li>
+          <li class="carousel-slide">
+            <div class="bloco">
+              <i class="ph ph-cardholder"></i>
+              <h3>Atualização de Parcelas</h3>
+              <br>
+              <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-bloco">Acessar</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-button carousel-button-left"><i class="ph ph-arrow-circle-left"></i></button>
+        <button class="carousel-button carousel-button-right"><i class="ph ph-arrow-circle-right"></i></button>
+      </div>
+    </div>
+  </section>
 
+  <section id="sobre" class="conteudo-1">
+    <div class="desc-conteudo-1">
+      <h2>Soluções na palma <br> da sua mão</h2>
+      <p>Facilite suas cobranças</p>
+      <p>Tenha controle total das suas cobranças de boletos de forma rápida e eficiente.</p>
+      <p>Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros, que tornem o dia a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais que o cliente preferir.</p>
+      <br><br>
+      <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="button-conteudo-1">Solicitar Atendimento</a>
+    </div>
+    <div class="img-conteudo-1">
+      <img src="bonecos.png" alt="">
+    </div>
+  </section>
 
-</a>
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
-        <button onclick="acceptCookies()">Aceitar</button>
+  <section id="servico" class="conteudo-2">
+    <div class="conteudo-2-desc">
+      <h2>Facilidades <br> para seu dia a dia</h2>
+      <div class="cards-conteudo-2">
+        <div class="bloco-conteudo-2">
+          <i class="ph ph-barcode"></i>
+          <h3>Segunda via de Boleto</h3>
+          <br>
+          <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="saibamais">Saiba mais -></a>
+        </div>
+        <div class="bloco-conteudo-2">
+          <i class="ph ph-currency-circle-dollar"></i>
+          <h3>Quitar Financiamento</h3>
+          <br>
+          <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="saibamais">Saiba mais -></a>
+        </div>
+        <div class="bloco-conteudo-2">
+          <i class="ph ph-calendar-check"></i>
+          <h3>Antecipar Parcelas</h3>
+          <br>
+          <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="saibamais">Saiba mais -></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/aos.js"></script>
+  <section class="conteudo-3">
+    <div class="cards-conteudo-3">
+      <div class="bloco-conteudo-3">
+        <h1>01</h1>
+        <h3>✓ Transparência</h3>
+        <p>Nosso compromisso com a transparência na negociação cria um ambiente de confiança mútua, onde cada parceria é construída sobre uma base sólida de honestidade e integridade</p>
+      </div>
+      <div class="bloco-conteudo-3">
+        <h1>02</h1>
+        <h3>✓ Seriedade</h3>
+        <p>Combinando transparência e seriedade, estabelecemos padrões elevados na negociação, garantindo relações sólidas e duradouras baseadas na confiança mútua e integridade inabalável.</p>
+      </div>
+      <div class="bloco-conteudo-3">
+        <h1>03</h1>
+        <h3>✓ Ética</h3>
+        <p>Guiados pela ética, nossa abordagem transparente e séria na negociação promove relações autênticas e duradouras, onde a confiança mútua é cultivada com integridade inquestionável.</p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.categoria');
-            menu.classList.toggle('show');
-        }
-    </script>
+  <section id="conteudo-4" class="conteudo-4">
+    <div class="img-conteudo-4">
+      <img src="banner-safra.png" alt="">
+    </div>
+    <div class="conteu-desc-4">
+      <i class="ph ph-whatsapp-logo"></i>
+      <h1>FAÇA UMA ANÁLISE GRATUITA <br> PELO WHATSAPP</h1>
+      <p>+ de 90 % dos Veículos Financiados no Brasil Possuem Juros Abusivos! Você tem um Veículo Financiado? Veja o Valor Real de Suas Parcelas Sem Juros Abusivos!</p>
+      <br><br>
+      <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" class="burron-conteudo-4">Fale Conosco</a>
+    </div>
+  </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('content');
+  <div class="img-main">
+    <img src="carros.jpg" alt="">
+  </div>
 
-            // Mostra o loader enquanto a página está carregando
-            loader.style.display = 'flex'; // ou 'block' dependendo do seu estilo
+  <div class="container">
+    <div class="steps">
+      <h1>Como Financiar Seu Veículo</h1>
+      <p>São apenas 3 passos para financiar seu veículo</p>
+      <div class="step">
+        <h2>1. Selecione o modelo de veículo</h2>
+        <p>O primeiro passo é selecionar o modelo de veículo. Utilize nosso quiz para auxiliá-lo ou busque uma de nossas revendas parceiras para encontrar o carro ideal para você.</p>
+      </div>
+      <div class="step">
+        <h2>2. Simule as parcelas</h2>
+        <p>Utilize o nosso simulador no site, ou vá até uma de nossas revendas parceiras para simular as condições do seu financiamento e realizar a análise do seu crédito.</p>
+      </div>
+      <div class="step">
+        <h2>3. Compareça a uma revenda</h2>
+        <p>Receba o resultado da análise e vá até a revenda escolhida com sua simulação em mãos (impressa ou digital) para efetivar o seu contrato.</p>
+      </div>
+    </div>
+    <div class="quiz">
+      <h2>Ainda não sabe qual veículo escolher?</h2>
+      <p>Nós te ajudamos a encontrar o veículo ideal. Responda algumas perguntas do nosso quiz</p>
+      <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento">Responder →</a>
+    </div>
+  </div>
 
-            // Função para esconder o loader e mostrar o conteúdo
-            function hideLoader() {
-                loader.style.display = 'none';
-                content.style.display = 'block';
-            }
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://api.whatsapp.com/send/?phone=5511966935322&text=Olá%20Gostaria%20de%20um%20atendimento" target="_blank" class="whatsapp-float">
+    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
-            // Executa hideLoader após um atraso de 1 segundo (simulando carregamento)
-            setTimeout(hideLoader, 1000); // ajuste conforme necessário
-        });
+  <!-- Rodapé / Contato -->
+  <footer id="contato" class="rodape">
+    <div class="container-rodape">
+      <p>&copy; 2025 Sociedade de Crédito - Todos os direitos reservados.</p>
+      <p><a href="mailto:contato@sociedadedecredito.com.br">contato@sociedadedecredito.com.br</a></p>
+    </div>
+  </footer>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Função para aplicar animações após o carregamento completo
-            function applyAnimations() {
-                const sectionsRight = document.querySelectorAll('.section-right');
-                const sectionsLeft = document.querySelectorAll('.section-left');
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+    <button onclick="acceptCookies()">Aceitar</button>
+  </div>
 
-                sectionsRight.forEach(section => {
-                    section.classList.add('visible');
-                });
+  <!-- Scripts JS (como estavam no original) -->
+  <script src="js/aos.js"></script>
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      sessionStorage.setItem('acceptedCookies', 'true');
+    }
 
-                sectionsLeft.forEach(section => {
-                    section.classList.add('visible');
-                });
-            }
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!sessionStorage.getItem('acceptedCookies')) {
+        setTimeout(() => {
+          var cookieBanner = document.getElementById('cookie-banner');
+          if (cookieBanner) cookieBanner.style.display = 'flex';
+        }, 3000);
+      }
+    });
 
-            // Executa applyAnimations após o carregamento completo da página
-            window.onload = applyAnimations;
-        });
-
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const track = document.querySelector('.carousel-track');
-            const slides = Array.from(track.children);
-            const nextButton = document.querySelector('.carousel-button-right');
-            const prevButton = document.querySelector('.carousel-button-left');
-
-            const slideWidth = slides[0].getBoundingClientRect().width;
-
-            // Arrange the slides next to one another
-            const setSlidePosition = (slide, index) => {
-                slide.style.left = slideWidth * index + 'px';
-            };
-            slides.forEach(setSlidePosition);
-
-            const moveToSlide = (track, currentSlide, targetSlide) => {
-                track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-                currentSlide.classList.remove('current-slide');
-                targetSlide.classList.add('current-slide');
-            };
-
-            // When I click left, move slides to the left
-            prevButton.addEventListener('click', e => {
-                const currentSlide = track.querySelector('.current-slide');
-                const prevSlide = currentSlide.previousElementSibling;
-
-                if (prevSlide) {
-                    moveToSlide(track, currentSlide, prevSlide);
-                }
+    // Rolar suave
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('.navegacao a[href^="#"]');
+      for (const link of links) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 70,
+              behavior: 'smooth'
             });
-
-            // When I click right, move slides to the right
-            nextButton.addEventListener('click', e => {
-                const currentSlide = track.querySelector('.current-slide');
-                const nextSlide = currentSlide.nextElementSibling;
-
-                if (nextSlide) {
-                    moveToSlide(track, currentSlide, nextSlide);
-                }
-            });
+          }
         });
+      }
+    });
+  </script>
 
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('a[href^="#"]');
-
-            for (const link of links) {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                });
-            }
-        });
-
-    </script>
-
-    <script>
-        function acceptCookies() {
-            document.getElementById('cookie-banner').style.display = 'none';
-            sessionStorage.setItem('acceptedCookies', 'true');
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            if (!sessionStorage.getItem('acceptedCookies')) {
-                setTimeout(function () {
-                    var cookieBanner = document.getElementById('cookie-banner');
-                    if (cookieBanner) {
-                        cookieBanner.style.display = 'flex';
-                    }
-                }, 3000); // Show after 5 seconds
-            }
-        });
-
-    </script>
-
-
-
-</body></html>
+</body>
+</html>
