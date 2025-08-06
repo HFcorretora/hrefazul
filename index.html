@@ -42,99 +42,92 @@
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.05);
     }
 
-.menu {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between; /* deixa logo à esquerda e menu à direita */
-  align-items: center;
-  position: relative;
-}
+    .menu {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between; /* logo à esquerda, menu à direita */
+      align-items: center;
+      position: relative;
+    }
 
-.categoria {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
+    .categoria {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
 
-.categoria li a {
-  text-decoration: none;
-  color: #0b5fff;
-  font-weight: 600;
-}
+    .categoria li a {
+      text-decoration: none;
+      color: #0b5fff;
+      font-weight: 600;
+    }
 
-.menu-icon {
-  font-size: 2rem;
-  display: none;
-  cursor: pointer;
-}
+    .menu-icon {
+      font-size: 2rem;
+      display: none;
+      cursor: pointer;
+      color: #0b5fff;
+    }
 
-@media (max-width: 768px) {
-  .categoria {
-    display: none;
-    flex-direction: column;
-    background-color: #0b5fff;
-    position: absolute;
-    top: 100%;
-    right: 0; /* fica alinhado à direita da tela */
-    width: 100%;
-    text-align: center;
-    z-index: 1000;
-  }
+    @media (max-width: 768px) {
+      .categoria {
+        display: none;
+        flex-direction: column;
+        background-color: #0b5fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+      }
 
-  .categoria.show {
-    display: flex;
-  }
+      .categoria.show {
+        display: flex;
+      }
 
-  .categoria li {
-    padding: 20px 0;
-    border-bottom: 1px solid #fff;
-  }
+      .categoria li {
+        padding: 20px 0;
+        border-bottom: 1px solid #fff;
+      }
 
-  .categoria li a {
-    color: #fff;
-  }
+      .categoria li a {
+        color: #fff;
+        font-size: 1.2rem;
+      }
 
-  .menu-icon {
-    display: block;
-  }
-}   
-    
+      .menu-icon {
+        display: block;
+      }
+    }
   </style>
 </head>
 
 <body>
-<!-- Menu de navegação -->
-<div class="menu">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center w-full">
-    <!-- Logo à esquerda -->
-    <div class="flex items-center gap-3">
-      <i class="fas fa-file-invoice-dollar text-customBlue text-2xl" aria-hidden="true"></i>
-      <img
-        src="logoipa.png"
-        alt="Minha Assessoria"
-        class="h-10 w-auto object-contain"
-        loading="lazy"
-      />
+  <!-- Menu de navegação -->
+  <div class="menu">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center w-full">
+      <!-- Logo à esquerda -->
+      <div class="flex items-center gap-3">
+        <i class="fas fa-file-invoice-dollar text-customBlue text-2xl" aria-hidden="true"></i>
+        <img
+          src="logoipa.png"
+          alt="Minha Assessoria"
+          class="h-8 w-auto object-contain" <!-- logo menor -->
+      </div>
+
+      <!-- Menu à direita -->
+      <ul class="categoria">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servico">Serviços</a></li>
+        <li><a href="#conteudo-4">Análise Gratuita</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <!-- Ícone menu para mobile -->
+      <span class="menu-icon" onclick="toggleMenu()">☰</span>
     </div>
-
-    <!-- Menu à direita -->
-    <ul class="categoria">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#servico">Serviços</a></li>
-      <li><a href="#conteudo-4">Análise Gratuita</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-
-    <!-- Ícone menu para mobile -->
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
   </div>
-</div>
-<div class="menu"></div>
-
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
-  </div>
-</div>
-
 
   <section class="banner">
     <div class="desc-banner">
@@ -462,7 +455,8 @@
       categoria.classList.toggle("show");
     }
   </script>
+
+  <script src="js/carousel.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 </html>
-<script src="js/carousel.js"></script>
-<script src="js/menu.js"></script>
