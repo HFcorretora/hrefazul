@@ -45,15 +45,36 @@
     .menu {
       padding: 20px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Logo à esquerda, menu à direita */
       align-items: center;
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .logo {
+    .menu > div.flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-container i {
       color: #0b5fff;
-      text-decoration: none;
       font-size: 2rem;
-      font-weight: 600;
+    }
+
+    .logo-container img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      display: block;
     }
 
     .categoria {
@@ -66,6 +87,7 @@
       text-decoration: none;
       color: #0b5fff;
       font-weight: 600;
+      font-size: 1rem;
     }
 
     .categoria li a:hover {
@@ -76,6 +98,7 @@
       font-size: 2rem;
       display: none;
       cursor: pointer;
+      color: #0b5fff;
     }
 
     @media (max-width: 768px) {
@@ -85,7 +108,7 @@
         background-color: #0b5fff;
         position: absolute;
         top: 100%;
-        left: 0;
+        right: 0;
         width: 100%;
         text-align: center;
         z-index: 1000;
@@ -102,6 +125,7 @@
 
       .categoria li a {
         color: #fff;
+        font-size: 1.2rem;
       }
 
       .menu-icon {
@@ -114,14 +138,24 @@
 <body>
   <!-- Menu de navegação -->
   <div class="menu">
-    <a href="#" class="logo">Atendimento</a>
-    <div class="menu-icon" onclick="toggleMenu(show)">☰</div>
-    <ul class="categoria">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#servico">Serviços</a></li>
-      <li><a href="#conteudo-4">Análise Gratuita</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
+    <div class="flex">
+      <!-- Logo à esquerda -->
+      <div class="logo-container">
+        <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+        <img src="logoipa.png" alt="Minha Assessoria" loading="lazy" />
+      </div>
+
+      <!-- Menu à direita -->
+      <ul class="categoria">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servico">Serviços</a></li>
+        <li><a href="#conteudo-4">Análise Gratuita</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <!-- Ícone menu para mobile -->
+      <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    </div>
   </div>
 
   <section class="banner">
@@ -435,64 +469,19 @@
   <script>
     function acceptCookies() {
       document.getElementById("cookie-banner").style.display = "none";
-      sessionStorage.setItem("acceptedCookies", "true");
+      localStorage.setItem("cookiesAccepted", "true");
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      if (!sessionStorage.getItem("acceptedCookies")) {
-        setTimeout(() => {
-          var cookieBanner = document.getElementById("cookie-banner");
-          if (cookieBanner) cookieBanner.style.display = "flex";
-        }, 3000);
-      }
-    });
+    // Mostrar banner se não aceitou cookies
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
 
-    // Função para toggle menu mobile
+    // Função para abrir/fechar menu mobile
     function toggleMenu() {
-      const menu = document.querySelector(".categoria");
-      menu.classList.toggle("show");
+      const categoria = document.querySelector(".categoria");
+      categoria.classList.toggle("show");
     }
-
-    // Carrossel
-    const track = document.querySelector(".carousel-track");
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector(".carousel-button-right");
-    const prevButton = document.querySelector(".carousel-button-left");
-    const slideWidth = slides[0].getBoundingClientRect().width;
-
-    // Arrange the slides next to one another
-    slides.forEach((slide, index) => {
-      slide.style.left = slideWidth * index + "px";
-    });
-
-    function moveToSlide(track, currentSlide, targetSlide) {
-      track.style.transform = "translateX(-" + targetSlide.style.left + ")";
-      currentSlide.classList.remove("current-slide");
-      targetSlide.classList.add("current-slide");
-    }
-
-    prevButton.addEventListener("click", () => {
-      const currentSlide = track.querySelector(".current-slide");
-      const prevSlide = currentSlide.previousElementSibling;
-
-      if (!prevSlide) {
-        moveToSlide(track, currentSlide, slides[slides.length - 1]);
-      } else {
-        moveToSlide(track, currentSlide, prevSlide);
-      }
-    });
-
-    nextButton.addEventListener("click", () => {
-      const currentSlide = track.querySelector(".current-slide");
-      const nextSlide = currentSlide.nextElementSibling;
-
-      if (!nextSlide) {
-        moveToSlide(track, currentSlide, slides[0]);
-      } else {
-        moveToSlide(track, currentSlide, nextSlide);
-      }
-    });
   </script>
 </body>
 </html>
-
